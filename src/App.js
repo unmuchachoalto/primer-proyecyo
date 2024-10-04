@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import TaskList from './TaskList';
 import TaskForm from './TaskForm';
 
+
 function App() {
   const [tasks, setTasks] = useState([]);
 
@@ -20,7 +21,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Lista de Tareas</h1>
+      <h1 className="Heading">Lista de Tareas</h1>
       <TaskForm addTask={addTask} />
       <TaskList tasks={tasks} updateTask={updateTask} deleteTask={deleteTask} />
     </div>

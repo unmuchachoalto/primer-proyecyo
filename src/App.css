@@ -1,6 +1,6 @@
-/* src/App.css */
+
 body {
-  background-color: #f0f0f0; /* Color de fondo */
+  background-color: #f51111; /* Color de fondo */
   color: rgb(223, 111, 0); /* Color de texto */
   font-family: Arial, sans-serif;
   margin: 0;
@@ -11,7 +11,7 @@ body {
   text-align: center;
 }
 
-h1 {
+.Heading {
   color: #d10000; /* Color del título */
 }
 
