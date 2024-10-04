@@ -1,16 +1,19 @@
-// src/Task.js
 import React from 'react';
 
 function Task({ task, updateTask, deleteTask }) {
   return (
-    <div className="task">
-      <h3>{task.name}</h3>
-      <p>Fecha de creación: {task.createdAt}</p>
-      <p>Fecha de actualización: {task.updatedAt}</p>
-      <p>Responsable: {task.responsible}</p>
-      <button onClick={() => updateTask({ ...task, name: "Nueva Tarea" })}>Actualizar</button>
-      <button onClick={() => deleteTask(task.id)}>Borrar</button>
-    </div>
+    <tr>
+      <td>{task.name}</td>
+      <td>{task.createdAt}</td>
+      <td>{task.updatedAt}</td>
+      <td>{task.responsible}</td>
+      <td>
+        <button onClick={() => updateTask({ ...task, updatedAt: new Date().toISOString() })}>
+          Actualizar
+        </button>
+        <button onClick={() => deleteTask(task.id)}>Borrar</button>
+      </td>
+    </tr>
   );
 }
 
